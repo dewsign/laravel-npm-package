@@ -1,7 +1,7 @@
 {
-    "name": "__org__/__app__",
-    "description": "Boilerplate repository for creating new Laravel or Javascript/Vue NPM packages",
-    "type": "boilerplate",
+    "name": "maxfactor/pages",
+    "description": "Internal Pages module for Maxfactor CMS",
+    "type": "plugin",
     "license": "MIT",
     "authors": [
         {
@@ -18,13 +18,13 @@
     },
     "autoload": {
         "psr-4": {
-            "__Org__\\__App__\\": "src-php/"
+            "Maxfactor\\CMS\\Pages\\": "src-php/"
         }
     },
     "extra":{
         "laravel": {
             "providers": [
-                "__Org__\\__App__\\Providers\\PackageServiceProvider"
+                "Maxfactor\\CMS\\Pages\\Providers\\PackageServiceProvider"
             ]
         }
     }

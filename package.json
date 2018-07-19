@@ -1,7 +1,7 @@
 {
-    "name": "@__org__/__app__",
+    "name": "maxfactor-cms-pages",
     "version": "1.0.0",
-    "description": "Boilerplate repository for creating new Laravel or Javascript/Vue NPM packages",
+    "description": "Internal Pages module for Maxfactor CMS",
     "main": "dist-js/index.js",
     "scripts": {
         "build": "rollup -c",
@@ -11,7 +11,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/__org__/__app__.git"
+        "url": "git+https://github.com/dewsign/maxfactor-cms-pages.git"
     },
     "keywords": [
         "boilerplate"
@@ -19,9 +19,9 @@
     "author": "Marco Mark <m2de@outlook.com>",
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/__org__/__app__/issues"
+        "url": "https://github.com/dewsign/maxfactor-cms-pagesissues"
     },
-    "homepage": "https://github.com/__org__/__app__#readme",
+    "homepage": "https://github.com/dewsign/maxfactor-cms-pages#readme",
     "devDependencies": {
         "babel-core": "^6.26.3",
         "babel-eslint": "^8.2.6",

@@ -1,6 +1,6 @@
 <?php
 
-namespace __Org_\__App__\Providers;
+namespace Maxfactor\CMS\Pages\Providers;
 
 use Illuminate\Routing\Router;
 use Illuminate\Support\ServiceProvider;
@@ -52,9 +52,9 @@ class PackageServiceProvider extends ServiceProvider
      */
     private function bootViews()
     {
-        $this->loadViewsFrom(__DIR__.'/../Resources/views', '__org__');
+        $this->loadViewsFrom(__DIR__.'/../Resources/views', 'maxfactor');
         $this->publishes([
-            __DIR__.'/../Resources/views' => resource_path('views/vendor/__org__'),
+            __DIR__.'/../Resources/views' => resource_path('views/vendor/maxfactor'),
         ]);
     }
 
@@ -66,7 +66,7 @@ class PackageServiceProvider extends ServiceProvider
     private function bootAssets()
     {
         $this->publishes([
-            __DIR__.'/../Resources/assets/js' => resource_path('assets/js/vendor/__org__'),
+            __DIR__.'/../Resources/assets/js' => resource_path('assets/js/vendor/maxfactor'),
         ], 'js');
     }
 
