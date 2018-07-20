@@ -40,5 +40,9 @@
         "rollup-plugin-vue": "^4.3.1",
         "vue-template-compiler": "^2.5.16"
     },
-    "dependencies": {}
+    "dependencies": {
+        "ajax-store": "^1.0.6",
+        "maxfactor-cms": "^1.0.7",
+        "maxfactor-vue-support": "^1.1.4"
+    }
 }
