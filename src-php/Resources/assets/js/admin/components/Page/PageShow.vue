@@ -11,7 +11,7 @@
                 v-model="valid"
                 lazy-validation
             >
-                <content-card>
+                <content-card heading="Details">
                     <v-checkbox
                         v-model="value.active"
                         label="Published"
@@ -80,10 +80,10 @@
                     />
                 </content-card>
 
-                <repeater-block
+                <repeater-blocks
                     :repeaters="repeaters"
-                    :content="repeaterBlocks"
-                    @input="value => value.page_content = value"
+                    :content="value.page_content || []"
+                    @input="content => value.page_content = content"
                 />
 
                 <delete-dialog
@@ -110,6 +110,7 @@ import {
     Language,
     Repeaters,
     DetailView,
+    MetaAttributes,
     RepeaterBlocks,
     FeaturedImageMixin,
 } from 'maxfactor-cms'
@@ -118,6 +119,7 @@ export default {
 
     components: {
         RepeaterBlocks,
+        MetaAttributes,
     },
 
     mixins: [
@@ -156,10 +158,11 @@ export default {
         routeParams() {
             return {
                 page: this.itemId,
+                locale: this.locale,
             }
         },
 
-        reapeaters() {
+        repeaters() {
             return Repeaters.RichTextRepeaters
         },
     },

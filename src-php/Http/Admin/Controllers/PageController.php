@@ -42,7 +42,7 @@ class PageController extends Controller
      * @param  Page  $page
      * @return \Illuminate\Http\Response
      */
-    public function update(PageRequest $request, Page $page)
+    public function update(PageRequest $request, string $locale = null, Page $page)
     {
         $page->update($request->validated());
 
@@ -57,7 +57,7 @@ class PageController extends Controller
      * @param  \App\Page  $page
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Page $page)
+    public function destroy(string $locale = null, Page $page)
     {
         $page->delete();
 

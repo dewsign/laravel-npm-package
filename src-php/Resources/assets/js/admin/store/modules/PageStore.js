@@ -1,9 +1,9 @@
-import { AjaxStore } from 'maxfactor-vue-support'
+import { AjaxStore } from 'ajax-store'
 
 class PageStore extends AjaxStore {
     constructor() {
         super({
-            action: window.route('admin.page.index').toString(),
+            action: window.route('admin.page.index', '__locale__').toString(),
         })
     }
 }
