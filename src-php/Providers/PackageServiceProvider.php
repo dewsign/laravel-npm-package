@@ -62,7 +62,7 @@ class PackageServiceProvider extends ServiceProvider
     {
         $this->loadViewsFrom(__DIR__.'/../Resources/views', 'maxfactor');
         $this->publishes([
-            __DIR__.'/../Resources/views' => resource_path('views/vendor/maxfactor'),
+            __DIR__.'/../Resources/views' => resource_path('views'),
         ]);
     }
 
@@ -74,7 +74,7 @@ class PackageServiceProvider extends ServiceProvider
     private function bootAssets()
     {
         $this->publishes([
-            __DIR__.'/../Resources/assets/js' => resource_path('assets/js/vendor/maxfactor'),
+            __DIR__.'/../Resources/assets/js' => resource_path('assets/js'),
         ], 'js');
     }
 
@@ -104,9 +104,5 @@ class PackageServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__ . '/../Database/migrations' => base_path('database/migrations')
         ], 'migrations');
-
-        $this->publishes([
-            __DIR__ . '/../Database/seeds' => base_path('database/seeds')
-        ], 'seeds');
     }
 }
