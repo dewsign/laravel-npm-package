@@ -18,6 +18,7 @@ class PackageServiceProvider extends ServiceProvider
         $this->bootAssets();
         $this->bootCommands();
         $this->publishDatabaseFiles();
+        $this->publishControllers();
         $this->registerMiddleware($router);
     }
 
@@ -29,6 +30,13 @@ class PackageServiceProvider extends ServiceProvider
     public function register()
     {
         //
+    }
+
+    private function publishControllers()
+    {
+        $this->publishes([
+            __DIR__ . '/../stubs/Admin' => base_path('app/Http/Controllers/Admin')
+        ], 'controllers');
     }
 
     /**
