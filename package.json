@@ -42,7 +42,7 @@
     },
     "dependencies": {
         "ajax-store": "^1.0.6",
-        "maxfactor-cms": "^1.0.7",
+        "maxfactor-cms": "^1.1.1",
         "maxfactor-vue-support": "^1.1.4"
     }
 }
